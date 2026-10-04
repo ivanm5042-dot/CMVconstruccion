@@ -192,6 +192,7 @@
   const applyLanguage = (value) => {
     lang = value === "ca" ? "ca" : "es";
     document.documentElement.lang = lang;
+    document.querySelectorAll("[data-language]").forEach(el => el.setAttribute("aria-pressed", String(el.dataset.language === lang)));
     const button = document.getElementById("siteLanguage");
     button.setAttribute("aria-label", lang === "ca" ? "Català. Canviar a castellà" : "Español. Cambiar a catalán");
     button.title = lang === "ca" ? "Català · Canviar a castellà" : "Español · Cambiar a catalán";
@@ -216,6 +217,7 @@
     try { localStorage.setItem("cmv-language", lang); } catch (e) { /* almacenamiento no disponible */ }
   };
   document.getElementById("siteLanguage").addEventListener("click", () => applyLanguage(lang === "es" ? "ca" : "es"));
+  document.querySelectorAll("[data-language]").forEach(el => el.addEventListener("click", () => applyLanguage(el.dataset.language)));
   let saved = "es";
   try { saved = localStorage.getItem("cmv-language") || "es"; } catch (e) { /* almacenamiento no disponible */ }
   if (saved === "ca") applyLanguage("ca");

@@ -564,3 +564,8 @@ body { background: var(--white); }
 .hero .btn-line:hover { background: #fff; color: var(--ink); }
 .hero-grid { padding-top: clamp(48px, 6vw, 80px); padding-bottom: clamp(56px, 7vw, 96px); }
 @media (max-width: 860px) { :root { --bar-h: 204px; } .bar-brand img { width: 180px; height: 180px; } .bar-inner { padding-inline: 16px; } .hero { background-position: 60% center; } }
+
+/* Idiomas debajo de las secciones del menú. */
+.menu-languages.lang { display: flex; gap: 12px; padding: 16px 0 4px; border: 0; background: transparent; }
+.menu-languages button { padding: 10px 14px; border: 1px solid #ddd; background: #fff; color: #292929; font: inherit; cursor: pointer; }
+.menu-languages button[aria-pressed="true"] { border-color: #f46a13; color: #9c3d02; background: #fff4eb; }
