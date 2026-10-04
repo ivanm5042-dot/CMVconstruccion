@@ -502,11 +502,11 @@ body { background: var(--white); }
 .form { border: 1px solid var(--rule); }
 
 /* Entrada CMV: fondo blanco y navegación desplegable en todos los tamaños. */
-:root { --bar-h: 132px; }
+:root { --bar-h: 240px; }
 .bar { background: #fff; color: var(--ink); border-bottom: 1px solid #eee; }
 .bar-inner { grid-template-columns: 1fr auto; }
 .bar-brand { opacity: 1; transform: none; pointer-events: auto; align-items: center; }
-.bar-brand img { width: 112px; height: 112px; object-fit: cover; clip-path: circle(45% at 50% 47.5%); }
+.bar-brand img { width: 220px; height: 220px; object-fit: cover; clip-path: circle(45% at 50% 47.5%); }
 .bar-cta { display: none; }
 .lang, .menu { color: var(--ink); border: 1px solid #ddd; background: #fff; }
 .lang:hover { background: #f5f5f5; }
@@ -527,4 +527,8 @@ body { background: var(--white); }
 .hero .btn-line { color: var(--ink); border-color: #bbb; }
 .hero .btn-line:hover { background: var(--ink); color: #fff; }
 .hero-grid { padding-top: clamp(32px, 5vw, 64px); }
-@media (max-width: 860px) { :root { --bar-h: 100px; } .bar-brand img { width: 84px; height: 84px; } }
+@media (max-width: 860px) { :root { --bar-h: 148px; } .bar-brand img { width: 128px; height: 128px; } }
+
+/* Alinear la entrada con el logo y equilibrar el espacio vertical. */
+.hero-grid { padding-top: clamp(24px, 3vw, 40px); }
+.hero-place { color: var(--ink-soft); }
