@@ -591,3 +591,10 @@ body { background: var(--white); }
   .hero h1 { font-size: clamp(2rem, 8vw, 3rem); max-width: 21ch; }
   .hero-photo { margin-top: 32px; max-width: 520px; justify-self: center; }
 }
+
+/* Fondo original con encuadre más amplio y prioridad a la parte superior. */
+.hero { background: linear-gradient(90deg, rgba(0,0,0,.60), rgba(0,0,0,.25)), url("assets/entrada-patio.jpeg") center top / cover no-repeat; }
+.hero-grid { grid-template-columns: 1fr; grid-template-areas: "h1" "lede" "actions"; align-content: center; min-height: clamp(680px, 65vw, 960px); padding-block: 72px; }
+.hero h1 { align-self: auto; max-width: 21ch; }
+.hero-actions { align-self: auto; }
+@media (max-width: 860px) { .hero-grid { min-height: 780px; padding-block: 56px; grid-template-areas: "h1" "lede" "actions"; } }
