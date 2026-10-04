@@ -537,3 +537,6 @@ body { background: var(--white); }
 .bar-brand img { object-fit: contain; clip-path: none; }
 .hero h1 { font-size: clamp(2.25rem, 4.6vw, 3.8rem); max-width: 21ch; line-height: 1.08; }
 @media (max-width: 540px) { .hero h1 { font-size: clamp(2rem, 8vw, 2.65rem); } }
+
+/* El encabezado permanece al inicio y sale de la vista al desplazarse. */
+.bar { position: relative; top: auto; }
