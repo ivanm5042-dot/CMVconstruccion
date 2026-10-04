@@ -601,3 +601,8 @@ body { background: var(--white); }
 
 /* Subir ligeramente la fotografía para reducir el cielo visible. */
 .hero { background-position: center 12%; }
+
+/* Marca más visible y franja negra más compacta. */
+:root { --bar-h: 184px; }
+.bar-brand img { width: 280px; height: 160px; }
+@media (max-width: 860px) { :root { --bar-h: 140px; } .bar-brand img { width: 200px; height: 114px; } }
