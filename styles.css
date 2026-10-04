@@ -547,3 +547,20 @@ body { background: var(--white); }
 .bar { background: #292929; color: #fff; border-bottom-color: #292929; }
 .menu { background: transparent; color: #fff; border-color: #ffffff4d; }
 .menu:hover { background: #ffffff0a; border-color: #f46a13; }
+
+/* Entrada solicitada: marca centrada, ladrillos blancos y foto de fondo. */
+:root { --bar-h: 284px; }
+.bar-inner { grid-template-columns: 1fr auto 1fr; gap: 12px; }
+.bar-brand { grid-column: 2; justify-self: center; }
+.bar-brand img { width: 260px; height: 260px; }
+.bar-tools { grid-column: 3; justify-self: end; }
+.menu, .menu:hover { border: 0; background: transparent; }
+.menu svg { width: 30px; height: 30px; }
+.bar::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='18' viewBox='0 0 96 18'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M1 1h43v6H1z M49 1h43v6H49z M-23 11h43v6h-43z M25 11h43v6H25z M73 11h43v6H73z'/%3E%3C/g%3E%3C/svg%3E") repeat-x; }
+.hero { background: linear-gradient(90deg, rgba(0,0,0,.69), rgba(0,0,0,.38)), url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=2000&q=90") center 55% / cover; color: #fff; }
+.hero h1 { text-shadow: 0 2px 16px #0003; }
+.hero-lede, .hero-place { color: #fff; }
+.hero .btn-line { color: #fff; border-color: #ffffffaa; background: #00000018; }
+.hero .btn-line:hover { background: #fff; color: var(--ink); }
+.hero-grid { padding-top: clamp(48px, 6vw, 80px); padding-bottom: clamp(56px, 7vw, 96px); }
+@media (max-width: 860px) { :root { --bar-h: 204px; } .bar-brand img { width: 180px; height: 180px; } .bar-inner { padding-inline: 16px; } .hero { background-position: 60% center; } }
