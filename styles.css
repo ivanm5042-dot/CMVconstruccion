@@ -574,3 +574,6 @@ body { background: var(--white); }
 .bar-inner { grid-template-columns: minmax(0, 1fr) auto; }
 .bar-brand { grid-column: 1; justify-self: start; }
 .bar-tools { grid-column: 2; justify-self: end; }
+
+/* Foto propia de entrada: conservar siempre la zona superior. */
+.hero { background-image: linear-gradient(90deg, rgba(0,0,0,.64), rgba(0,0,0,.32)), url("assets/entrada-patio.jpeg"); background-position: center top; background-size: cover; }
