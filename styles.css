@@ -601,3 +601,9 @@ body { background: var(--white); }
 
 /* Subir ligeramente la fotografía para reducir el cielo visible. */
 .hero { background-position: center 12%; }
+
+/* Cabecera móvil más baja y marca ligeramente más grande. */
+@media (max-width: 860px) {
+  :root { --bar-h: 164px; }
+  .bar-brand img { width: 200px; height: 200px; }
+}
