@@ -577,3 +577,17 @@ body { background: var(--white); }
 
 /* Foto propia de entrada: conservar siempre la zona superior. */
 .hero { background-image: linear-gradient(90deg, rgba(0,0,0,.64), rgba(0,0,0,.32)), url("assets/entrada-patio.jpeg"); background-position: center top; background-size: cover; }
+
+/* Mostrar la obra completa: composición de texto y fotografía vertical. */
+.hero { background: #292929; color: #fff; }
+.hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); grid-template-areas: "h1 photo" "lede photo" "actions photo"; column-gap: clamp(32px, 5vw, 72px); align-items: center; padding-block: clamp(36px, 5vw, 64px); }
+.hero h1 { align-self: end; font-size: clamp(2.25rem, 4.2vw, 3.65rem); max-width: 17ch; }
+.hero-lede { align-self: center; margin: 24px 0 28px; }
+.hero-actions { align-self: start; }
+.hero-photo { grid-area: photo; margin: 0; width: 100%; }
+.hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; border-radius: 4px; box-shadow: 0 16px 40px #0003; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; grid-template-areas: "h1" "lede" "actions" "photo"; }
+  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); max-width: 21ch; }
+  .hero-photo { margin-top: 32px; max-width: 520px; justify-self: center; }
+}
