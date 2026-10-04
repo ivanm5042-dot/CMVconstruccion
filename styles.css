@@ -598,3 +598,6 @@ body { background: var(--white); }
 .hero h1 { align-self: auto; max-width: 21ch; }
 .hero-actions { align-self: auto; }
 @media (max-width: 860px) { .hero-grid { min-height: 780px; padding-block: 56px; grid-template-areas: "h1" "lede" "actions"; } }
+
+/* Subir ligeramente la fotografía para reducir el cielo visible. */
+.hero { background-position: center 12%; }
