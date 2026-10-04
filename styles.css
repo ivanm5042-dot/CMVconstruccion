@@ -532,3 +532,8 @@ body { background: var(--white); }
 /* Alinear la entrada con el logo y equilibrar el espacio vertical. */
 .hero-grid { padding-top: clamp(24px, 3vw, 40px); }
 .hero-place { color: var(--ink-soft); }
+
+/* Logo vectorial y título de entrada más contenido. */
+.bar-brand img { object-fit: contain; clip-path: none; }
+.hero h1 { font-size: clamp(2.25rem, 4.6vw, 3.8rem); max-width: 21ch; line-height: 1.08; }
+@media (max-width: 540px) { .hero h1 { font-size: clamp(2rem, 8vw, 2.65rem); } }
