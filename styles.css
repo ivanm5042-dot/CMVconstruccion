@@ -539,3 +539,6 @@ body { background: var(--white); }
 
 /* El encabezado permanece al inicio y sale de la vista al desplazarse. */
 .bar { position: relative; top: auto; }
+
+/* Ocultar el selector de idioma del encabezado. */
+#siteLanguage { display: none; }
