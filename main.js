@@ -26,16 +26,6 @@
 
   /* ---------- Barra: compacta al pasar el banner ---------- */
   const bar = document.getElementById("bar");
-  const banner = document.querySelector(".banner");
-  const compactOnly = bar.querySelectorAll(".bar-brand, .bar-cta");
-  const setCompact = (on) => {
-    bar.classList.toggle("is-compact", on);
-    compactOnly.forEach((el) => el.setAttribute("tabindex", on ? "0" : "-1"));
-  };
-  new IntersectionObserver(([entry]) => setCompact(!entry.isIntersecting), {
-    rootMargin: `-${bar.offsetHeight}px 0px 0px 0px`,
-  }).observe(banner);
-
   /* ---------- Menú móvil ---------- */
   const menu = document.getElementById("menuToggle");
   const links = document.getElementById("barLinks");

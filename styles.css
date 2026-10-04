@@ -500,3 +500,31 @@ body { background: var(--white); }
 .step h3 { color: var(--ink); }
 .step p { color: var(--ink-soft); }
 .form { border: 1px solid var(--rule); }
+
+/* Entrada CMV: fondo blanco y navegación desplegable en todos los tamaños. */
+:root { --bar-h: 132px; }
+.bar { background: #fff; color: var(--ink); border-bottom: 1px solid #eee; }
+.bar-inner { grid-template-columns: 1fr auto; }
+.bar-brand { opacity: 1; transform: none; pointer-events: auto; align-items: center; }
+.bar-brand img { width: 112px; height: 112px; object-fit: cover; clip-path: circle(45% at 50% 47.5%); }
+.bar-cta { display: none; }
+.lang, .menu { color: var(--ink); border: 1px solid #ddd; background: #fff; }
+.lang:hover { background: #f5f5f5; }
+.menu { display: grid; place-items: center; width: 44px; height: 44px; }
+.menu svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; }
+.menu path { transition: transform .3s, opacity .2s; transform-origin: center; }
+.menu[aria-expanded="true"] .m1 { transform: translateY(5px) rotate(45deg); }
+.menu[aria-expanded="true"] .m2 { opacity: 0; }
+.menu[aria-expanded="true"] .m3 { transform: translateY(-5px) rotate(-45deg); }
+.bar-links { position: absolute; top: var(--bar-h); right: var(--gutter); left: auto; width: min(360px, calc(100vw - 32px)); display: flex; flex-direction: column; gap: 0; padding: 12px 24px; background: #fff; border: 1px solid #eee; box-shadow: 0 16px 36px #00000012; font-size: 17px; visibility: hidden; opacity: 0; transform: translateY(-8px); transition: opacity .2s, transform .2s, visibility .2s; }
+.bar-links.open { visibility: visible; opacity: 1; transform: none; }
+.bar-links a { padding: 16px 0; color: var(--ink); border-bottom: 1px solid #eee; }
+.bar-links a:last-child { border-bottom: 0; }
+.bar-links a:hover { color: var(--orange-ink); }
+.bar-links a::after { left: 0; right: auto; width: 32px; bottom: 8px; }
+.hero { background: #fff; color: var(--ink); box-shadow: none; }
+.hero-lede { color: var(--ink-soft); }
+.hero .btn-line { color: var(--ink); border-color: #bbb; }
+.hero .btn-line:hover { background: var(--ink); color: #fff; }
+.hero-grid { padding-top: clamp(32px, 5vw, 64px); }
+@media (max-width: 860px) { :root { --bar-h: 100px; } .bar-brand img { width: 84px; height: 84px; } }
