@@ -569,3 +569,8 @@ body { background: var(--white); }
 .menu-languages.lang { display: flex; gap: 12px; padding: 16px 0 4px; border: 0; background: transparent; }
 .menu-languages button { padding: 10px 14px; border: 1px solid #ddd; background: #fff; color: #292929; font: inherit; cursor: pointer; }
 .menu-languages button[aria-pressed="true"] { border-color: #f46a13; color: #9c3d02; background: #fff4eb; }
+
+/* Logo y menú en extremos opuestos del encabezado. */
+.bar-inner { grid-template-columns: minmax(0, 1fr) auto; }
+.bar-brand { grid-column: 1; justify-self: start; }
+.bar-tools { grid-column: 2; justify-self: end; }
