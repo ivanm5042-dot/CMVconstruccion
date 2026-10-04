@@ -542,3 +542,8 @@ body { background: var(--white); }
 
 /* Ocultar el selector de idioma del encabezado. */
 #siteLanguage { display: none; }
+
+/* Encabezado oscuro unificado con el fondo del logo. */
+.bar { background: #292929; color: #fff; border-bottom-color: #292929; }
+.menu { background: transparent; color: #fff; border-color: #ffffff4d; }
+.menu:hover { background: #ffffff0a; border-color: #f46a13; }
